@@ -12,7 +12,7 @@ about_page = st.Page(
 project_1_page = st.Page(
     "views/resources.py",
     title="resources",
-    icon=":material/bar_chart:",
+    icon=":material/brown_heart:",
 )
 project_2_page = st.Page(
     "views/events.py",
