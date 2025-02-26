@@ -17,7 +17,7 @@ project_1_page = st.Page(
 project_2_page = st.Page(
     "views/events.py",
     title="Events",
-    icon=":material/smart_toy:",
+    icon=":material/calendar_month:",
 )
 
 # --- NAVIGATION SETUP [WITHOUT SECTIONS] ---
