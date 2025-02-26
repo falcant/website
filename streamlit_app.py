@@ -12,12 +12,12 @@ about_page = st.Page(
 project_1_page = st.Page(
     "views/resources.py",
     title="resources",
-    icon=":material/brown_heart:",
+    icon=":material/favorite:",
 )
 project_2_page = st.Page(
     "views/events.py",
     title="Events",
-    icon=":material/smart_toy:",
+    icon=":material/calendar_month:",
 )
 
 # --- NAVIGATION SETUP [WITHOUT SECTIONS] ---
