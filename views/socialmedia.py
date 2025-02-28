@@ -9,7 +9,6 @@ st.write(
     """
     - Instagram:
     - Discord:
-    - Facebook:
-    - TikTok:
+    - Strava:
     """
 )
