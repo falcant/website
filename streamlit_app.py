@@ -31,4 +31,10 @@ pg = st.navigation(
     }
 )
 
+
+# --- SHARED ON ALL PAGES ---
+st.logo("assets/combined_logo.png")
+st.sidebar.markdown("Made with ❤️ by the [WTC](https://www.instagram.com/wasatchtrailscollective/)")
+
+
 pg.run()
