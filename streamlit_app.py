@@ -5,7 +5,7 @@ import streamlit as st
 # --- PAGE SETUP ---
 about_page = st.Page(
     "views/about_me.py",
-    title="About Me",
+    title="About us",
     icon=":material/account_circle:",
     default=True,
 )
