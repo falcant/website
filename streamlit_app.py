@@ -10,8 +10,8 @@ about_page = st.Page(
     default=True,
 )
 project_1_page = st.Page(
-    "views/resources.py",
-    title="resources",
+    "views/socialmedia.py",
+    title="Social Media",
     icon=":material/favorite:",
 )
 project_2_page = st.Page(
