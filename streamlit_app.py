@@ -5,7 +5,7 @@ import streamlit as st
 # --- PAGE SETUP ---
 about_page = st.Page(
     "views/about_me.py",
-    title="About us",
+    title="About WTC / Mission Statement",
     icon=":material/account_circle:",
     default=True,
 )
@@ -15,8 +15,8 @@ project_1_page = st.Page(
     icon=":material/favorite:",
 )
 project_2_page = st.Page(
-    "views/events.py",
-    title="Events",
+    "views/calendar.py",
+    title="Calendar",
     icon=":material/calendar_month:",
 )
 
@@ -26,8 +26,9 @@ project_2_page = st.Page(
 # --- NAVIGATION SETUP [WITH SECTIONS]---
 pg = st.navigation(
     {
-        "Info": [about_page],
-        "Resources": [project_1_page, project_2_page],
+        "Information": [about_page],
+        "Resources": [project_1_page],
+        "Events": [ project_2_page]
     }
 )
 

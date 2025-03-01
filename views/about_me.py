@@ -1,5 +1,6 @@
 import streamlit as st
-
+# library to rotate the image
+from PIL import Image, ImageOps
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
@@ -45,6 +46,8 @@ col1, col2,col3 = st.columns(3, gap="small", vertical_alignment="center")
 with col1:
     st.image("./assets/wtc_firstmeeting.jpg")
 with col2:
-    st.image("./assets/wtc_firstgearswap.JPG")
+    image = Image.open("./assets/wtc_firstgearswap.JPG")
+    image = ImageOps.exif_transpose(image)
+    st.image(image)
 with col3:
     st.image("./assets/wtc_firsthalfmarathon.jpeg")
