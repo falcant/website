@@ -46,7 +46,7 @@ col1, col2,col3 = st.columns(3, gap="small", vertical_alignment="center")
 with col1:
     st.image("./assets/wtc_firstmeeting.jpg")
 with col2:
-    image = Image.open("./assets/wtc_firstgearswap.JPG")
+    image = Image.open("./assets/wtc_firstgearswap.jpg")
     image = ImageOps.exif_transpose(image)
     st.image(image)
 with col3:
