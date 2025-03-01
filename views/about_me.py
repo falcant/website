@@ -36,3 +36,15 @@ st.write(
 
     """
 )
+
+#st.image("./assets/wtc_firstmeeting.jpg",width=400,caption="(WTC First Event - March 18th 2023)")
+#st.image("./assets/wtc_firstmeeting.jpg",width=400,caption="(WTC First Event - March 18th 2023)")
+#--- Photo Section------
+col1, col2,col3 = st.columns(3, gap="small", vertical_alignment="center")
+
+with col1:
+    st.image("./assets/wtc_firstmeeting.jpg")
+with col2:
+    st.image("./assets/wtc_firstgearswap.JPG")
+with col3:
+    st.image("./assets/wtc_firsthalfmarathon.jpeg")
