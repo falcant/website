@@ -9,6 +9,16 @@ about_page = st.Page(
     icon=":material/account_circle:",
     default=True,
 )
+founders_page = st.Page(
+    "views/founders_mentors.py",
+    title="Founders / Mentors",
+    icon="✨",
+)
+leaders_page = st.Page(
+    "views/leaders.py",
+    title="WTC Leaders",
+    icon="🌟",
+)
 project_1_page = st.Page(
     "views/socialmedia.py",
     title="Social Media",
@@ -19,6 +29,16 @@ project_2_page = st.Page(
     title="Calendar",
     icon=":material/calendar_month:",
 )
+project_3_page = st.Page(
+    "views/running.py",
+    title="Running/Hiking",
+    icon="👟",
+)
+project_4_page = st.Page(
+    "views/winter_sports.py",
+    title="Skiing/Snowboarding",
+    icon="⛷",
+)
 
 # --- NAVIGATION SETUP [WITHOUT SECTIONS] ---
 #pg = st.navigation(pages=[about_page, project_1_page, project_2_page])
@@ -26,9 +46,9 @@ project_2_page = st.Page(
 # --- NAVIGATION SETUP [WITH SECTIONS]---
 pg = st.navigation(
     {
-        "Information": [about_page],
+        "Information": [about_page,founders_page,leaders_page],
         "Resources": [project_1_page],
-        "Events": [ project_2_page]
+        "Events": [ project_2_page,project_3_page,project_4_page]
     }
 )
 
