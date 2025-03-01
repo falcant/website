@@ -8,16 +8,19 @@ with col1:
 with col2:
     st.title("Wasatch Trails Collective", anchor=False)
     st.write(
-        "A group for runners of color in the Salt Lake Area. ⛰️Eastern Shoshone, Goshute, and Núu-agha-tʉvʉ-pʉ̱ (Ute) Lands" )
-    st.write("Se habla Español.") 
+        """... creating an inclusive & supportive community for runners of color along the Wasatch Front.""")
+          
+    st.write("⛰️Eastern Shoshone, Goshute, and Núu-agha-tʉvʉ-pʉ̱ (Ute) Lands. Se habla Español.") 
     #st.write(" ⛰️Eastern Shoshone, Goshute, and Núu-agha-tʉvʉ-pʉ̱ (Ute) Lands")
 
 # --- ABOUT US ---
+
 st.write("\n")
-st.subheader("About the WTC", anchor=False)
+st.subheader("Who Are We?:", anchor=False)
 st.write(
     """
-    'About us' content
+    We are a trail-focused running group created by and for runners of color in the Salt Lake Area.
+
     """
 )
 
@@ -26,6 +29,10 @@ st.write("\n")
 st.subheader("WTC Mission Statement", anchor=False)
 st.write(
     """
-    'Mission Statement' Content
+    Our mission is to create an inclusive & supportive community for runners of color along the Wasatch Front.
+      We strive to provide a space that empowers runners of all levels to achieve their personal goals, 
+      improve diversity & equity in the broader running community, 
+      and reduce the barriers that limit the participation & representation of people of color in endurance sports. 
+
     """
 )
