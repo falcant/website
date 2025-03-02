@@ -60,7 +60,7 @@ with col1:
 with col2:
     st.write("""\n """)
     st.write("\n")
-    st.image("./assets/reference_image.jpg", width=400,caption="Reference Image for logo (Wasatch Front)")
+    st.image("./assets/reference_image.jpg",caption="Reference Image for logo (Wasatch Front)")
 
 
 col1,col2 = st.columns(2, gap="small", vertical_alignment="center")
