@@ -14,6 +14,17 @@ with col2:
     st.write("⛰️Eastern Shoshone, Goshute, and Núu-agha-tʉvʉ-pʉ̱ (Ute) Lands. Se habla Español.") 
     #st.write(" ⛰️Eastern Shoshone, Goshute, and Núu-agha-tʉvʉ-pʉ̱ (Ute) Lands")
 
+#-- History of the Wastach Trails Collective
+st.write("\n")
+col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
+with col1:
+
+    st.subheader("How it Started:", anchor=False)
+    st.write("""
+            TBH
+            """)
+with col2:
+    st.image("./assets/wtc_firstmeeting.png", width=300, caption = "WTC First Meeting - March 2023")
 # --- ABOUT US ---
 
 st.write("\n")
