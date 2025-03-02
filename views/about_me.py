@@ -39,6 +39,8 @@ with col2:
              """)
 with col3:
     st.write(' ')
+
+st.write(" \n ")
 col1,col2 = st.columns((1,1))
 with col1:
 
@@ -46,6 +48,8 @@ with col1:
     Recognizing the need for change, Siani reached out to Chanh about starting a group for runners of color. Al great Things need a name, so we
     turned to CHATGPT to generate some options for us. Then Siani reached out to the handful of runners of color she knew, asking the what name they liked and if would like
     to help lead this group. Cristina, Sandra and Cindy were immediately on board.
+    
+             
     Over Warm bowls of pho, we discussed our dreams for this group.
     We wanted to create a welcoming enviroment for runners
     of all backgrounds, provide gear assistance, offer bilingual
@@ -54,18 +58,57 @@ with col1:
     unwelcomed. """)
 
 with col2:
-    st.image("./assets/reference_image.jpg", width=300)
+    st.write("""\n """)
+    st.write("\n")
+    st.image("./assets/reference_image.jpg", width=400,caption="Reference Image for logo (Wasatch Front)")
 
+
+col1,col2 = st.columns(2, gap="small", vertical_alignment="center")
+
+with col1:
+    st.write("""\n """)
+    st.write("\n")
+    st.image("./assets/wtc_firstmeeting.jpg",caption = "First WTC Meeting - March 2023")
+
+with col2:
+    st.write("""
+    In addition to our core running activities, the Wasatch Trails Collective has broadened its scope
+    , now encompassing a variety of interests
+    . We've expanded into skiing, hiking, and even a book club, among other activities.
+    
+             
+    The WTC experience is uniquely personal. For some, it's a dedicated running group for runners of color
+    , providing a supportive and inclusive space. For others, it's a vibrant social community where shared
+     meals like tacos, boba
+    , and hotpot are enjoyed alongside optional runs.
+""")
 # --- ABOUT US ---
 
 st.write("\n")
 st.subheader("Who Are We?:", anchor=False)
 st.write(
     """
-    We are a trail-focused running group created by and for runners of color in the Salt Lake Area.
+    The WTC is a vibrant hub for people of color seeking both athletic and social connection. 
+    We're more than just a multi-sport collective
+    , offering activities from hiking and skiing to running and cycling; we're also a vital support system.
+      Recognizing the unique challenges faced by underrepresented individuals,
+        we provide a safe and inclusive space for members to build camaraderie,
+     share experiences, and access resources. Whether it's conquering a challenging trail or navigating everyday life, 
+     we're committed to empowering our members to thrive
+    , fostering a sense of belonging and collective strength
 
     """
 )
+
+col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
+
+
+with col1:
+    image = Image.open("./assets/wtc_firstgearswap.jpg")
+    image = ImageOps.exif_transpose(image)
+    st.image(image,caption="WTC Gear Swap")
+with col2:
+    st.image("./assets/wtc_firsthalfmarathon.jpeg",caption="SLC Half Marathon 2024")
 
 # --- Mission Statement ---
 st.write("\n")
@@ -83,13 +126,3 @@ st.write(
 #st.image("./assets/wtc_firstmeeting.jpg",width=400,caption="(WTC First Event - March 18th 2023)")
 #st.image("./assets/wtc_firstmeeting.jpg",width=400,caption="(WTC First Event - March 18th 2023)")
 #--- Photo Section------
-col1, col2,col3 = st.columns(3, gap="small", vertical_alignment="center")
-
-with col1:
-    st.image("./assets/wtc_firstmeeting.jpg")
-with col2:
-    image = Image.open("./assets/wtc_firstgearswap.jpg")
-    image = ImageOps.exif_transpose(image)
-    st.image(image)
-with col3:
-    st.image("./assets/wtc_firsthalfmarathon.jpeg")
