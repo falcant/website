@@ -16,15 +16,46 @@ with col2:
 
 #-- History of the Wastach Trails Collective
 st.write("\n")
-col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
+
+st.subheader("How it Started:", anchor=False)
+st.write("""
+        With the mountains and trails so close, 
+trail Running in the Salt Lake valley should be easy.
+But for People of color, concerns about encountering
+racism, affording the gear and lack of resources
+complicate this experience and limit our access.
+
+        """)
+# -- next centered paragraph
+col1, col2,col3 = st.columns(3, gap="small", vertical_alignment="center")
+with col1:
+    st.write(' ')
+with col2:
+    st.write("""Maybe Joining a local running group will help,
+    but even that can be intimidating. "*Will I be the only
+    person of color? Will there be runners who regularly
+    make racist jokes? Who leads the group? Is everyone
+    dedicated to fostering a welcoming environment?*"
+             """)
+with col3:
+    st.write(' ')
+col1,col2 = st.columns((1,1))
 with col1:
 
-    st.subheader("How it Started:", anchor=False)
     st.write("""
-            TBH
-            """)
+    Recognizing the need for change, Siani reached out to Chanh about starting a group for runners of color. Al great Things need a name, so we
+    turned to CHATGPT to generate some options for us. Then Siani reached out to the handful of runners of color she knew, asking the what name they liked and if would like
+    to help lead this group. Cristina, Sandra and Cindy were immediately on board.
+    Over Warm bowls of pho, we discussed our dreams for this group.
+    We wanted to create a welcoming enviroment for runners
+    of all backgrounds, provide gear assistance, offer bilingual
+    English and Spanish support, and implement a no-drop
+    policy to ensure that on one feels like a burden or
+    unwelcomed. """)
+
 with col2:
-    st.image("./assets/wtc_firstmeeting.png", width=300, caption = "WTC First Meeting - March 2023")
+    st.image("./assets/reference_image.jpg", width=300)
+
 # --- ABOUT US ---
 
 st.write("\n")
