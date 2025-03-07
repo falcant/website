@@ -4,7 +4,7 @@ from PIL import Image
 
 load_css()
 st.image("./assets/combined_logo.png", width=300)
-st.title('FOLLOW US ON SOCIAL MEDIA!')
+st.title('FOLLOW US ON SOCIAL MEDIA!', anchor=False)
 col1, col2 = st.columns(2)
 #col2.image(Image.open('dp.png'))
 with col1:
