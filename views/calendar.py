@@ -1,74 +1,90 @@
 import streamlit as st
-import pandas as pd
-import pydeck as pdk
+from streamlit_calendar import calendar
+from datetime import datetime
 
-# Sample event data with coordinates and descriptions
-event_data = pd.DataFrame(
+# Sample event data (replace with your data source)
+events = [
     {
-        "event_name": ["Group Run", "Social Event", "Track Workout"],
-        "latitude": [34.0522, 40.7128, 37.7749],
-        "longitude": [-118.2437, -74.0060, -122.4194],
-        "description": [
-            "Easy 5k group run in the park.",
-            "Post-race celebration at the pub.",
-            "Speed workout at the local track.",
-        ],
-    }
-)
-
-st.title("Interactive Event Map")
-
-# Pydeck layer for event markers
-layer = pdk.Layer(
-    "ScatterplotLayer",
-    data=event_data,
-    get_position=["longitude", "latitude"],
-    get_radius=1000,  # Radius in meters
-    get_color=[255, 140, 0],  # Orange color
-    pickable=True,  # Make markers interactive
-)
-
-# Pydeck view
-view_state = pdk.ViewState(
-    latitude=event_data["latitude"].mean(),
-    longitude=event_data["longitude"].mean(),
-    zoom=4,
-    pitch=0,
-)
-
-# Pydeck tooltip
-tooltip = {
-    "html": "<b>{event_name}</b><br>{description}",
-    "style": {
-        "backgroundColor": "white",
-        "color": "black",
+        "id": 1,
+        "title": "Group Run - Morning",
+        "start": "2024-10-27T08:00:00",
+        "end": "2024-10-27T09:00:00",
+        "allDay": False,
+        "description": "Easy 5k run in the park.",
     },
+    {
+        "id": 2,
+        "title": "Group Run - Evening",
+        "start": "2024-10-27T18:00:00",
+        "end": "2024-10-27T19:00:00",
+        "allDay": False,
+        "description": "Speed workout at the track.",
+    },
+    {
+        "id": 3,
+        "title": "Social Event",
+        "start": "2024-11-03",
+        "end": "2024-11-04",
+        "allDay": True,
+        "description": "Post-race celebration at the local pub.",
+    },
+    {
+        "id": 4,
+        "title": "Long Run",
+        "start": "2024-11-10T07:00:00",
+        "end": "2024-11-10T10:00:00",
+        "allDay": False,
+        "description": "15 mile long run.",
+    }
+]
+
+calendar_options = {
+    "initialView": "dayGridMonth",
+    "locale": "en",
+    "editable": False,
+    "selectable": True,
 }
 
-# Render the map
-st.pydeck_chart(pdk.Deck(layers=[layer], initial_view_state=view_state, tooltip=tooltip))
+calendar_output = calendar(events, calendar_options)
 
-# Display event details based on selection (optional)
-st.subheader("Event Details")
-if st.session_state.get("deck_click_event"):
-    clicked_event = st.session_state["deck_click_event"]["object"]
-    if clicked_event:
-        st.write(f"**{clicked_event['event_name']}**")
-        st.write(f"Description: {clicked_event['description']}")
-        st.write(f"Latitude: {clicked_event['latitude']}")
-        st.write(f"Longitude: {clicked_event['longitude']}")
-else:
-    st.write("Click on a marker to see event details.")
+if calendar_output and calendar_output.get("date"):
+    selected_date_str = calendar_output["date"]
+    selected_date = datetime.strptime(selected_date_str, "%Y-%m-%d").date()
 
-# Add a callback to store clicked event data in session state
-def update_click_event(event):
-    st.session_state["deck_click_event"] = event
+    st.write(f"### Events on {selected_date}:")
+    events_on_date = [
+        event
+        for event in events
+        if datetime.strptime(event["start"].split("T")[0], "%Y-%m-%d").date() == selected_date
+        or (event.get("allDay") and datetime.strptime(event["start"], "%Y-%m-%d").date() <= selected_date and datetime.strptime(event["end"], "%Y-%m-%d").date() >= selected_date)
+    ]
 
-# Register the callback with st.pydeck_chart
-if "deck_click_event" not in st.session_state:
-    st.session_state["deck_click_event"] = None
+    if events_on_date:
+        for event in events_on_date:
+            st.write(f"- **{event['title']}**")
+            if not event["allDay"]:
+                st.write(f"  - Time: {event['start'].split('T')[1]} - {event['end'].split('T')[1]}")
+            if "description" in event:
+                st.write(f"  - Description: {event['description']}")
+    else:
+        st.write("No events on this day.")
+elif calendar_output and calendar_output.get("start"): #if a date range is selected
+    start_date = datetime.strptime(calendar_output["start"].split("T")[0], "%Y-%m-%d").date()
+    end_date = datetime.strptime(calendar_output["end"].split("T")[0], "%Y-%m-%d").date()
 
-st.pydeck_chart(
-    pdk.Deck(layers=[layer], initial_view_state=view_state, tooltip=tooltip),
-    on_click=update_click_event,
-)
+    st.write(f"### Events between {start_date} and {end_date}:")
+    events_in_range = [
+        event
+        for event in events
+        if (datetime.strptime(event["start"].split("T")[0], "%Y-%m-%d").date() >= start_date and datetime.strptime(event["start"].split("T")[0], "%Y-%m-%d").date() <= end_date)
+        or (event.get("allDay") and datetime.strptime(event["start"], "%Y-%m-%d").date() <= end_date and datetime.strptime(event["end"], "%Y-%m-%d").date() >= start_date)
+    ]
+    if events_in_range:
+        for event in events_in_range:
+            st.write(f"- **{event['title']}**")
+            if not event["allDay"]:
+                st.write(f"  - Time: {event['start'].split('T')[1]} - {event['end'].split('T')[1]}")
+            if "description" in event:
+                st.write(f"  - Description: {event['description']}")
+    else:
+        st.write("No events in this range.")

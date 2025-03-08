@@ -5,4 +5,4 @@ streamlit==1.36.0
 #pip install streamlit_calendar
 streamlit_calendar
 datetime
-pydeck
+#pydeck
