@@ -4,8 +4,14 @@ from PIL import Image
 
 load_css()
 st.image("./assets/combined_logo.png", width=300)
+
+st.write("""
+    Stay connected and never miss a beat with the WTC! Join our online community to connect with fellow runners
+        , share your progress, and be the first to know about special announcements.
+     Don't just run with us, be part of our digital journey and stay up-to-date with all the latest happenings!
+""")
 st.title('FOLLOW US ON SOCIAL MEDIA!', anchor=False)
-col1, col2 = st.columns(2)
+col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 #col2.image(Image.open('dp.png'))
 with col1:
 
