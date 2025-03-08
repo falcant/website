@@ -3,3 +3,4 @@
 streamlit==1.36.0
 #pip install streamlit st_social_media_links
 #pip install streamlit_calendar
+streamlit_calendar
