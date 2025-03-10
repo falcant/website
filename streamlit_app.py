@@ -29,9 +29,6 @@ project_2_page = st.Page(
     title="Calendar",
     icon=":material/calendar_month:",
 )
-
-
-
 # --- NAVIGATION SETUP [WITHOUT SECTIONS] ---
 #pg = st.navigation(pages=[about_page, project_1_page, project_2_page])
 
