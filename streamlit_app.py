@@ -29,18 +29,8 @@ project_2_page = st.Page(
     title="Calendar",
     icon=":material/calendar_month:",
 )
-"""
-project_3_page = st.Page(
-    "views/running.py",
-    title="Running/Hiking",
-    icon="👟",
-)
-project_4_page = st.Page(
-    "views/winter_sports.py",
-    title="Skiing/Snowboarding",
-    icon="⛷",
-)
-"""
+
+
 # --- NAVIGATION SETUP [WITHOUT SECTIONS] ---
 #pg = st.navigation(pages=[about_page, project_1_page, project_2_page])
 
