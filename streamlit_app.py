@@ -39,9 +39,7 @@ pg = st.navigation(
     {
         "Information": [about_page,founders_page,leaders_page],
         "Resources": [project_1_page],
-        "Events": [ project_2_page
-                   #,project_3_page,project_4_page
-                   ]
+        "Events": [ project_2_page]
     }
 )
 
