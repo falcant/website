@@ -3,7 +3,12 @@ from views.st_functions import st_button, load_css
 from PIL import Image
 
 #load_css()
-st.image("./assets/combined_logo.png", width=300)
+col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
+with col1:
+
+    st.image("./assets/combined_logo.png",output_format = "PNG")
+with col2:
+    st.write('')
 
 st.write("""
     Stay connected and never miss a beat with the WTC! Join our online community to connect with fellow runners

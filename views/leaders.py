@@ -1,7 +1,12 @@
 import streamlit as st
 from PIL import Image, ImageOps
 
-st.image("./assets/combined_logo.png", width=300)
+col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
+with col1:
+
+    st.image("./assets/combined_logo.png",output_format = "PNG")
+with col2:
+    st.write('')
 st.title("Leadership Crew 🌟", anchor=False)
 st.write("""To us leaders, it's the supportive and welcoming group
          that we wished existed when we started (trail) running, skiing, or any other outdoor activity.
