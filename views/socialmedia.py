@@ -14,7 +14,6 @@ st.title('FOLLOW US ON SOCIAL MEDIA!', anchor=False)
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 #col2.image(Image.open('dp.png'))
 with col1:
-
     load_css()
 
     icon_size = 20
@@ -24,5 +23,6 @@ with col1:
     st_button('','https://linktr.ee/wasatchtrailscollective', 'Linktree',icon_size)
 
 with col2:
-
+    #st.write(" \n ")
+    st.write(" \n ")
     st.image("./assets/follow_us.png",output_format = "PNG")
