@@ -25,4 +25,4 @@ with col1:
 
 with col2:
 
-    st.image("./assets/follow_us.jpeg", width=390)
+    st.image("./assets/follow_us.png",output_format = "PNG", width=390)

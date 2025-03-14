@@ -56,7 +56,7 @@ def calendar_app(event_data):
 
 #if __name__ == "__main__":
 
-st.image("./assets/combined_logo.png", width=300)
+st.image("./assets/combined_logo.png",output_format='PNG',width=300)
 st.header("EVENTS")
 st.write("""
      🎉 Our calendar of events is packed with exciting runs 🏃‍♀️🏃‍♂️, social gatherings 🥳, 
