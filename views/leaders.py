@@ -24,7 +24,7 @@ with col1:
 
 with col2:
     #st.header("(Insert Photo Here)", anchor=False)
-    st.image("./assets/mimi_wtc.png",output_format = "PNG",width=300)
+    st.image("./assets/mimi_wtc.png",output_format = "PNG")
 
 
 #-------Leader ----------------------
