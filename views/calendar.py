@@ -16,7 +16,8 @@ import datetime
 
 event_data = {
     date(2025, 3, 22): [("🎉🎉WTC - 2 year anniversary run/hike 🎉🎉","Come join us for a short  2 mile run/hike to celebrate the 2 year anniversary 🥳!!","https://maps.app.goo.gl/omPVnJBPcqKRCc937?g_st=com.google.maps.preview.copy","9:45am"),
-                        ("🎉🎉WTC 2 Year Anniversary Party!!🎉🎉","Come Dance💃🕺, Sing 🎤🎶, Hang Out🎉, this party is FOR YOU!!","https://maps.app.goo.gl/owzqrdq7NgzcbG2Q8","6:00pm")]
+                        ("🎉🎉WTC 2 Year Anniversary Party!!🎉🎉","Come Dance💃🕺, Sing 🎤🎶, Hang Out🎉, this party is FOR YOU!! For more details, click [here](https://www.eventbrite.com/e/wasatch-trails-collective-2nd-anniversary-party-tickets-1264714307539?aff=oddtdtcreator) "
+                         ,"https://maps.app.goo.gl/owzqrdq7NgzcbG2Q8","6:00pm")]
 }
 
 def calendar_app(event_data):
