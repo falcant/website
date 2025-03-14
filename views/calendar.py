@@ -1,13 +1,22 @@
 import streamlit as st
 import calendar
 from datetime import date
+import datetime
+
+#March Events
+
 
 # Sample event data (replace with your data source)
+#event_data = {
+#    date(2025, 3, 22): ["🎉🎉WTC 2 Year Anniversary Hike!!🎉🎉","🎉🎉WTC 2 Year Anniversary Party!!🎉🎉"],
+#    date(2024, 3, 22): ["Client presentation"],
+#    date(2024, 11, 5): ["Team lunch"],
+#    date(2024, 11, 15): ["Holiday"]
+#}
+
 event_data = {
-    date(2025, 3, 26): ["Meeting with team", "Project deadline"],
-    date(2024, 10, 28): ["Client presentation"],
-    date(2024, 11, 5): ["Team lunch"],
-    date(2024, 11, 15): ["Holiday"]
+    date(2025, 3, 22): [("🎉🎉WTC - 2 year anniversary run/hike 🎉🎉","Come join us for a short  2 mile run/hike to celebrate the 2 year anniversary 🥳!!","https://maps.app.goo.gl/omPVnJBPcqKRCc937?g_st=com.google.maps.preview.copy"),
+                        ("🎉🎉WTC 2 Year Anniversary Party!!🎉🎉","Come Dance💃🕺, Sing 🎤🎶, Hang Out🎉, this party is FOR YOU!!","https://maps.app.goo.gl/owzqrdq7NgzcbG2Q8")]
 }
 
 def calendar_app(event_data):
@@ -16,55 +25,49 @@ def calendar_app(event_data):
     showing the number of events on each day, with aligned days of the week.
     """
 
-    st.title("Interactive Calendar")
+    #st.title("EVENTS")
 
-    today = date.today()
-    current_year = today.year
-    current_month = today.month
+    selected_date = st.date_input("Please Choose a Date", 'today')
+    #st.write("Your birthday is:", d)
+    #selected_date = None
 
-    year = st.number_input("Year", min_value=1900, max_value=2100, value=current_year)
-    month = st.number_input("Month", min_value=1, max_value=12, value=current_month)
-
-    cal = calendar.monthcalendar(year, month)
-    month_name = calendar.month_name[month]
-
-    st.write(f"### {month_name} {year}")
-
-    days = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
-    cols = st.columns(7)  # Create 7 columns for days of the week
-
-    # Display days of the week headers
-    for i, day_name in enumerate(days):
-        with cols[i]:
-            st.write(day_name)
-
-    selected_date = None
-
-    for week in cal:
-        cols = st.columns(7)  # Create 7 columns for each week
-        for i, day in enumerate(week):
-            with cols[i]:
-                if day == 0:
-                    st.write(" ")
-                else:
-                    day_date = date(year, month, day)
-                    num_events = len(event_data.get(day_date, []))
-                    if num_events > 0:
-                        button_text = f"{day}"
-        
-                    else:
-                        button_text = str(day)
-
-                    if st.button(button_text, key=f"{year}-{month}-{day}"):
-                        selected_date = day_date
 
     if selected_date:
         st.write(f"### Events for {selected_date.strftime('%Y-%m-%d')}:")
         if selected_date in event_data:
-            for event in event_data[selected_date]:
-                st.write(f"- {event}")
+            #for event in event_data[selected_date]:
+                #st.write(f""" {event} """)
+                #st.write(" - click here for details")
+            #for (event_title, event_details) in event_data.items():
+            for date_key in event_data[selected_date]:
+                event_title,event_detail,event_location = date_key
+
+                st.write(f""" {event_title} """)
+                st.write(f""" 
+                         - {event_detail}
+                         - Location: [here]({event_location}) 
+                         """)
+                #st.write(f""" Location: {event_location}""")
+
         else:
             st.write("No events for this day.")
 
 #if __name__ == "__main__":
-calendar_app(event_data)
+
+st.image("./assets/combined_logo.png", width=300)
+st.header("EVENTS")
+st.write("""
+     🎉 Our calendar of events is packed with exciting runs 🏃‍♀️🏃‍♂️, social gatherings 🥳, 
+         and training opportunities 💪 designed to keep you motivated and connected. 
+         From scenic trail runs 🏞️ to invigorating group workouts 🏋️‍♀️, there's something for everyone. 
+         Take a moment to browse the calendar 🗓️ and discover your next running adventure 🗺️
+         . It's the best way to stay informed 📣, plan your week 📝, 
+         and join us in building a stronger, healthier community 💗!!
+""")
+
+col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
+with col1:
+
+    calendar_app(event_data)
+with col2:
+    st.image("./assets/wtc_twinpeaks.jpg", width=300)

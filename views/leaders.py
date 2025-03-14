@@ -23,7 +23,8 @@ with col1:
         """)
 
 with col2:
-    st.header("(Insert Photo Here)", anchor=False)
+    #st.header("(Insert Photo Here)", anchor=False)
+    st.image("./assets/mimi_wtc.jpg", width=240)
 
 
 #-------Leader ----------------------
@@ -40,7 +41,9 @@ with col1:
         """)
 
 with col2:
-    st.header("(Insert Photo Here)", anchor=False)
+ 
+    #st.header("(Insert Photo Here)", anchor=False)
+    st.image("./assets/hector_wtc.jpg", width=240)
 
 
 #-------Leader ----------------------
