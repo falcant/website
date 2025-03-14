@@ -4,7 +4,7 @@ from PIL import Image, ImageOps
 # --- HERO SECTION ---
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
-    st.image("./assets/wtc_circle_birthday.png", width=300)
+    st.image("./assets/wtc_circle_birthday.PNG", width=300)
 
 with col2:
     st.title("Wasatch Trails Collective", anchor=False)
