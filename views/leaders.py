@@ -48,7 +48,7 @@ with col2:
     st.write(" ")
     st.write(" ")
     #st.header("(Insert Photo Here)", anchor=False)
-    st.image("./assets/hector_wtc.png", output_format = "PNG",width=300)
+    st.image("./assets/hector_wtc.png", output_format = "PNG")
 
 
 #-------Leader ----------------------
@@ -67,7 +67,7 @@ with col1:
 with col2:
     image = Image.open("./assets/louise_wtc.png")
     image = ImageOps.exif_transpose(image)
-    st.image(image, output_format = "PNG",width=300)
+    st.image(image, output_format = "PNG")
 
 #-------Leader ----------------------
 

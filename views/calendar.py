@@ -72,4 +72,4 @@ with col1:
 
     calendar_app(event_data)
 with col2:
-    st.image("./assets/wtc_twinpeaks.jpg", width=300)
+    st.image("./assets/wtc_twinpeaks.jpg")

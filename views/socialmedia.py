@@ -2,7 +2,7 @@ import streamlit as st
 from views.st_functions import st_button, load_css
 from PIL import Image
 
-load_css()
+#load_css()
 st.image("./assets/combined_logo.png", width=300)
 
 st.write("""
@@ -15,7 +15,7 @@ col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 #col2.image(Image.open('dp.png'))
 with col1:
 
-
+    load_css()
 
     icon_size = 20
     st_button('instagram', 'https://www.instagram.com/wasatchtrailscollective/', 'Instagram', icon_size)
@@ -25,4 +25,4 @@ with col1:
 
 with col2:
 
-    st.image("./assets/follow_us.png",output_format = "PNG", width=390)
+    st.image("./assets/follow_us.png",output_format = "PNG")
