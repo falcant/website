@@ -139,14 +139,25 @@ with col2:
 
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
-    st.header("DeShawna (Pronouns)", anchor=False)
+    st.header("DeShawna", anchor=False)
     st.write(""" 
-             - Why I run?:
-             - Go-to running trail:
-             - When I'm not running, you can find me:
+             - **Why I run?**: I run to feel alive! To feel the cold air to my finger tips and the sweat
+             running down my face; feeling my heart beating so fast; feeling the burn in my legs to running up the mountains!
+             The pain and disconfort feels so good just within that moment.
+             - **Go-to running trail**: Malans Mountain-eye challenging with good vert, good technicality of stepping,
+              and beautiful scenery!
+             - **When I'm not running, you can find me**: Mom duties; homework, cleaning and doing laundry! it's never
+             ending tasks!
              
-             - Go to Boba Order:
+             - ** Go to food/snack order** : Pickles 🥒, potato chips and coke! I try to keep simple and easy! and affordable 😊.
         """)
 
 with col2:
-    st.header("(Insert Photo Here)", anchor=False)
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.image("./assets/deshawna_wtc.png", output_format = "PNG")
