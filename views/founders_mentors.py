@@ -4,7 +4,7 @@ import streamlit as st
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
 
-    st.image("./assets/combined_logo.PNG",output_format = "PNG")
+    st.image("./assets/combined_logo.png",output_format = "PNG")
 with col2:
     st.write('')
 st.title("Founders & Mentors ✨", anchor=False)
