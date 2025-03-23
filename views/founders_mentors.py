@@ -75,6 +75,18 @@ with col1:
         """)
 
 with col2:
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
+    st.write("")
     st.image("./assets/felix_wtc.png",output_format = "PNG")
 
 #-----Founder---------------
