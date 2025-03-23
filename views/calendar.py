@@ -59,7 +59,7 @@ def calendar_app(event_data):
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
 
-    st.image("./assets/combined_logo_birthday.PNG",output_format = "PNG")
+    st.image("./assets/combined_logo.PNG",output_format = "PNG")
 with col2:
     st.write('')
 st.header("EVENTS",anchor=False)

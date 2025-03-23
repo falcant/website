@@ -4,7 +4,7 @@ import streamlit as st
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
 
-    st.image("./assets/combined_logo_birthday.PNG",output_format = "PNG")
+    st.image("./assets/combined_logo.PNG",output_format = "PNG")
 with col2:
     st.write('')
 st.title("Founders & Mentors ✨", anchor=False)
@@ -33,13 +33,13 @@ with col2:
 #-----Founder---------------
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
-    st.header("Cindy (Pronouns)", anchor=False)
+    st.header("Cindy (SHe/Her)", anchor=False)
     st.write(""" 
-             - Why I run?:
-             - Go-to running trail:
-             - When I'm not running, you can find me:
+             - **Why I run?**: I run because it reminds me of how mentally strong I am. Also- it’s just fun. 
+             - **Go-to running trail**: City Creek BST. 
+             -**When I'm not running, you can find me**: Mountain biking. Hanging with my kiddos, spouse, and doggo. Teaching truth to power. ✊🏽
              
-             - Go to Boba Order:
+             - **Go to food/snack order**: Popcorn with lemon, salt, and tapatio. For Boba Order, Lychee tea. Half sweet. Extra ice. Boba and grass jelly.
         """)
 
 with col2:
