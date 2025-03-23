@@ -4,7 +4,7 @@ from PIL import Image, ImageOps
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
 
-    st.image("./assets/combined_logo_birthday.PNG",output_format = "PNG")
+    st.image("./assets/combined_logo.PNG",output_format = "PNG")
 with col2:
     st.write('')
 st.title("Leadership Crew 🌟", anchor=False)
@@ -52,6 +52,12 @@ with col2:
     st.write(" ")
     st.write(" ")
     st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
     #st.header("(Insert Photo Here)", anchor=False)
     st.image("./assets/hector_wtc.png", output_format = "PNG")
 
@@ -78,17 +84,24 @@ with col2:
 
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
-    st.header("Lia (Pronouns)", anchor=False)
+    st.header("Lia (She/Her)", anchor=False)
     st.write(""" 
-             - Why I run?:
-             - Go-to running trail:
-             - When I'm not running, you can find me:
-             
-             - Go to Boba Order:
+             - **Why I run?**: I run for the endorphins, the friends who push me to go further than I thought possible, and the food that's waiting at the finish. 
+             - **Go-to running trail**: Pipeline Trail.
+             - **When I'm not running, you can find me**: Pretending to stretch, indoor cycling, hiking with my camera in hand, and performing craniotomies on fruit flies—for science, of course!     
+             - **Go to food/snack order**: Scandinavian Swimmers.
         """)
 
 with col2:
-    st.header("(Insert Photo Here)", anchor=False)
+    #st.header("(Insert Photo Here)", anchor=False)
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.write(" ")
+    st.image("./assets/lia_wtc.png", output_format = "PNG")
 
 #-------Leader ----------------------
 
@@ -126,7 +139,7 @@ with col2:
 
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
-    st.header("Shawna (Pronouns)", anchor=False)
+    st.header("DeShawna (Pronouns)", anchor=False)
     st.write(""" 
              - Why I run?:
              - Go-to running trail:
