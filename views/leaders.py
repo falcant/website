@@ -31,12 +31,13 @@ with col2:
     #st.header("(Insert Photo Here)", anchor=False)
     st.image("./assets/mimi_wtc.png",output_format = "PNG")
 
-
+st.write("")
+st.write("")
 #-------Leader ----------------------
 
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
-    st.subheader("Hector (He/Him)", anchor=False)
+    st.header("Hector (He/Him)", anchor=False)
     st.write(""" 
              - **Why I run?**: I love to run because it helps me get out there and explore. 
                Running outdoors in the mountains is my favorite thing to do
@@ -53,7 +54,8 @@ with col2:
     #st.header("(Insert Photo Here)", anchor=False)
     st.image("./assets/hector_wtc.png", output_format = "PNG")
 
-
+st.write("")
+st.write("")
 #-------Leader ----------------------
 
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
@@ -72,6 +74,8 @@ with col2:
     image = ImageOps.exif_transpose(image)
     st.image(image, output_format = "PNG")
 
+st.write("")
+st.write("")
 #-------Leader ----------------------
 
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
@@ -89,6 +93,8 @@ with col2:
     
     st.image("./assets/lia_wtc.png", output_format = "PNG")
 
+st.write("")
+st.write("")
 #-------Leader ----------------------
 
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
@@ -105,6 +111,8 @@ with col1:
 with col2:
     st.header("(Insert Photo Here)", anchor=False)
 
+st.write("")
+st.write("")
 #-------Leader ----------------------
 
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
@@ -121,6 +129,8 @@ with col1:
 with col2:
     st.header("(Insert Photo Here)")
 
+st.write("")
+st.write("")
 #-------Leader ----------------------
 
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
