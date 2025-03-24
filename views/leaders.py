@@ -135,7 +135,7 @@ with col1:
              - **When I'm not running, you can find me**: Mom duties; homework, cleaning and doing laundry! it's never
              ending tasks!
              
-             - ** Go to food/snack order** : Pickles 🥒, potato chips and coke! I try to keep simple and easy! and affordable 😊.
+             - **Go to food/snack order** : Pickles 🥒, potato chips and coke! I try to keep simple and easy! and affordable 😊.
         """)
 
 with col2:
