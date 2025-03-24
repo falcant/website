@@ -49,15 +49,7 @@ with col1:
 
 with col2:
     
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
+   
     #st.header("(Insert Photo Here)", anchor=False)
     st.image("./assets/hector_wtc.png", output_format = "PNG")
 
@@ -94,13 +86,7 @@ with col1:
 
 with col2:
     #st.header("(Insert Photo Here)", anchor=False)
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
+    
     st.image("./assets/lia_wtc.png", output_format = "PNG")
 
 #-------Leader ----------------------
@@ -153,11 +139,5 @@ with col1:
         """)
 
 with col2:
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
-    st.write(" ")
+    
     st.image("./assets/deshawna_wtc.png", output_format = "PNG")
