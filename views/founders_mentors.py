@@ -30,6 +30,8 @@ with col1:
 with col2:
     st.header("(Insert Photo Here)", anchor=False)
 
+st.write("")
+st.write("")
 #-----Founder---------------
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
@@ -45,6 +47,8 @@ with col1:
 with col2:
     st.header("(Insert Photo Here)", anchor=False)
 
+st.write("")
+st.write("")
 #-----Founder---------------
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
@@ -63,6 +67,8 @@ with col1:
 with col2:
     st.image("./assets/cristina_wtc.png",output_format = "PNG")
 
+st.write("")
+st.write("")
 #-----Founder---------------
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
@@ -78,6 +84,8 @@ with col2:
     
     st.image("./assets/felix_wtc.png",output_format = "PNG")
 
+st.write("")
+st.write("")
 #-----Founder---------------
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
@@ -94,6 +102,8 @@ with col1:
 with col2:
     st.header("(Insert Photo Here)", anchor=False)
 
+st.write("")
+st.write("")
 #-----Founder---------------
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
