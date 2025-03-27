@@ -18,13 +18,15 @@ st.header("Get to know us! ☺💖", anchor=False)
 #-----Leader---------------
 col1, col2 = st.columns(2, gap="small", vertical_alignment="center")
 with col1:
-    st.header("Mimi (Pronouns)", anchor=False)
+    st.header("Mimi (She/Her/Ella)", anchor=False)
     st.write(""" 
-             - Why I run?:
-             - Go-to running trail:
-             - When I'm not running, you can find me:
+             - **Why I run?**: To Both Heal and push myself. It's Also another perfect
+             excuse to connect with nature and experience beautiful places!
+             - **Go-to running trail**: Rattlesnake Gultch
+             - **When I'm not running, you can find me**: Testing new recipes, planning my next climbing trip, 
+             perfecting my serve-and-volley, or working on one of many craft projects
              
-             - Go to food/snack order:
+             - **Go to food/snack order**: PB Banana Tortilla
         """)
 
 with col2:
